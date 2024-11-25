@@ -1,0 +1,5 @@
+# Dont include Clipse clipboard history
+.config/clipse/tmp_files
+.config/clipse/clipboard_history.json
+.config/clipse/clipse.log
+
