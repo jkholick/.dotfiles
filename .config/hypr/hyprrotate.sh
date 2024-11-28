@@ -12,7 +12,6 @@ done
 # For tablet laptop that starts with a portrait mode as default
 tablet_rotate() {
 	if [[ $1 == "" ]]; then
-        echo "tab null"
         current_rotation=$(hyprctl -j monitors | jq ".[$i].transform")
         if [[ $current_rotation == 3 ]]; then
             new_rotation=0
