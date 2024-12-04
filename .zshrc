@@ -31,11 +31,12 @@ source $ZSH/oh-my-zsh.sh
 # PS alias does not like space near the equal sign
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias yayclear='yay -Sc'
 
 # Separate cache directory for main laptop (i use arch BTW)
 if [ "$(hostname)" = "archlinux" ];then
     alias yay='yay --builddir /mnt/Builderlands/yay --cachedir /mnt/Builderlands/yay'
+    alias yaygitup="yay --sudoloop -S  $(yay -Q | grep '\b\w*-git\b' | sed 's/ .*//' | tr '\n' ' ')"
+    alias yayclear='yay -Sc'
 fi
 
 # Alias for progress bar copy and move
