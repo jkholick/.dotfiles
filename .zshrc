@@ -28,6 +28,9 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Custom Aliases 
+# Alias to make sudo work
+alias sudo='sudo '
+
 # PS alias does not like space near the equal sign
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -37,6 +40,7 @@ if [ "$(hostname)" = "archlinux" ];then
     alias yay='yay --builddir /mnt/Builderlands/yay --cachedir /mnt/Builderlands/yay'
     alias yaygitup="yay --sudoloop -S  $(yay -Q | grep '\b\w*-git\b' | sed 's/ .*//' | tr '\n' ' ')"
     alias yayclear='yay -Sc'
+    alias fixmount='sudo echo "fixing stuff" && sudo ntfsfix -d $(blkid --uuid 0AB6D7BBB6D7A58B) &  sudo ntfsfix -d $(blkid --uuid DA40CF3E40CF205D) &  sudo fsck $(blkid --uuid c07d060a-504b-48c6-a6eb-2aa41c87f8d2) & sleep 2 &&  sudo mount -a'
 fi
 
 # Alias for progress bar copy and move
@@ -88,3 +92,11 @@ alias sus="echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢤⣀⡀⠀⠀⠀⠀⠀⣀⡼⠁⠀⠀⠀⢹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠈⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠶⠦⠤⠤⠤⠤⠶⠞⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀'"
+
+# pnpm
+export PNPM_HOME="/home/jkholick/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
