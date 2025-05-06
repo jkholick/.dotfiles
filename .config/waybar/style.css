@@ -84,8 +84,9 @@ tooltip {
 
 #idle_inhibitor {
     color: #89dceb;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     margin-left:  10px;
+    padding-right:12px;
     font-size: 18px;
 }
 

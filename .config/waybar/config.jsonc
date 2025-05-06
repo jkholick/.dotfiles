@@ -160,7 +160,7 @@
         "scroll-step": 5
     },
     "network": {
-		"format-wifi": "<span color='#589df6'></span> <span color='#589df6'> </span>{bandwidthUpBits} <span color='#589df6'> </span>{bandwidthDownBits}",
+		"format-wifi": "<span color='#589df6'> </span> <span color='#589df6'> </span>{bandwidthUpBits} <span color='#589df6'> </span>{bandwidthDownBits}",
     "tooltip-format-wifi":"<span color='#589df6' ></span> <span color='grey'>{essid}</span> <span color='#589df6'> </span>{bandwidthUpBits} <span color='#589df6'> </span>{bandwidthDownBits}",	
     "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
 		"format-linked": "{ifname} (No IP) ",
