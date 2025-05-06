@@ -32,9 +32,10 @@ source $ZSH/oh-my-zsh.sh
 alias sudo='sudo '
 
 # PS alias does not like space near the equal sign
+# Adding color to life
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
+alias ip='ip -c'
 # Separate cache directory for main laptop (i use arch BTW)
 if [ "$(hostname)" = "archlinux" ];then
     alias yay='yay --builddir /mnt/Builderlands/yay --cachedir /mnt/Builderlands/yay'
