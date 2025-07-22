@@ -72,7 +72,8 @@ git submodule update --init --recursive
 ```
 
 3. Create symlinks using stow:
-Run the command inside the repo directory.
+
+    Run the command inside the repo directory.
 ```sh
 stow .
 ```
