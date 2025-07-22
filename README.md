@@ -24,11 +24,9 @@ A highly customized Hyprland configuration with:
 - Dynamic workspace management
 - Live wallpaper using mpvpaper with pywal integration
 
-### Terminal: Kitty
+### Terminal: Ghostty
 
-- Catppuccin Mocha theme
 - 70% background opacity
-- Disabled audio bell
 
 ### Shell: ZSH
 
@@ -73,11 +71,10 @@ cd ~/.dotfiles
 git submodule update --init --recursive
 ```
 
-3. Create symlinks:
+3. Create symlinks using stow:
+Run the command inside the repo directory.
 ```sh
-# You'll need to create symlinks from these configs to their respective locations
-ln -s ~/.dotfiles/.config/* ~/.config/
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
+stow .
 ```
 
 ## Dependencies
@@ -85,10 +82,10 @@ ln -s ~/.dotfiles/.zshrc ~/.zshrc
 Main components:
 - Hyprland
 - Waybar
-- Kitty
+- Ghostty
 - ZSH + Oh-My-Zsh
 - Powerlevel10k
-- MPV
+- MPVpaper
 - Dunst
 - AnyRun
 
@@ -96,7 +93,7 @@ Additional utilities:
 - Yazi (file manager)
 - Clipse (clipboard manager)
 - Zoxide (directory jumper)
-- Progress (mv/cp with progress bars)
+- advcpmv (mv/cp with progress bars)
 - KDE Connect
 - Playerctl
 - brightnessctl
