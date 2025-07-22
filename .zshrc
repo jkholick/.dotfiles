@@ -36,6 +36,7 @@ alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -c'
+
 # Separate cache directory for main laptop (i use arch BTW)
 if [ "$(hostname)" = "archlinux" ];then
     alias yay='yay --builddir /mnt/Builderlands/yay --cachedir /mnt/Builderlands/yay'
@@ -47,6 +48,9 @@ fi
 # Alias for progress bar copy and move
 alias mv='mvg -g'
 alias cp='cpg -g'
+
+# Alias script to find my phones ip if adb port is open
+alias phone-ip="~/.scripts/phone-ip.sh"
 
 # Yazi directory follow command
 function yy() {
