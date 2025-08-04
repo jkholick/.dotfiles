@@ -1,6 +1,6 @@
 #!/bin/bash
 
-local_ip_range=$(ip route | sed -r 's/\x1B\[[0-9;]*[mK]//g' | grep -oE '\b[^ ]*/[^ ]*\b')
+local_ip_range=$(ip route show dev wlp2s0 | sed -r 's/\x1B\[[0-9;]*[mK]//g' | grep -oE '\b[^ ]*/[^ ]*\b')
 
 if [[ $1 == "debug" ]]; then
     echo "The current local ip is $local_ip_range"

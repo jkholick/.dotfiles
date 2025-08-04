@@ -26,7 +26,7 @@ A highly customized Hyprland configuration with:
 
 ### Terminal: Ghostty
 
-- 70% background opacity
+- 60% background opacity
 
 ### Shell: ZSH
 
