@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-BIG_BOI="/mnt/Big_boi/Games/Cracked/Minecraft"
+BIG_BOI="/mnt/Big_boi/Games/Craked/Minecraft"
 
 if [ -d "$BIG_BOI" ]; then
   echo "File '$BIG_BOI' exists."
@@ -19,7 +19,7 @@ else
   echo "File '$COMMON_GROUND' does not exist."
 fi
 
-response=$(kdialog --title 'Select Your Minecraft Launcher Location' --geometry 240x180 --radiolist 'Select a Mincraft start location:' "${BIG_BOI_argument[@]}" "${COMMON_GROUND_argument[@]}")
+response=$(kdialog --title 'Select Your Minecraft Launcher Location' --geometry 240x240 --radiolist 'Select a Mincraft start location:' "${BIG_BOI_argument[@]}" "${COMMON_GROUND_argument[@]}")
 echo "the response is $response"
 
 case "$response" in
