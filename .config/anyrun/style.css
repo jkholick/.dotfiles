@@ -1,25 +1,69 @@
-#window {
-  background-color: rgba(0, 0, 0, 0);
+@define-color accent #7aa2f7;
+@define-color bg-color #1a1b26;
+@define-color fg-color #c0caf5;
+@define-color desc-color #9aa5ce;
+@define-color border-color #414868;
+
+window {
+  background: transparent;
 }
 
-box#main {
+box.main {
+  padding: 6px 3px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 2px solid @border-color;
+  background-color: @bg-color;
+}
+
+/* Typing area */
+text {
+  min-height: 22px;
+  padding: 6px 4px;
+  margin-bottom: 6px; /* space before results */
+  border-radius: 6px;
+  color: @fg-color;
+  
+  border-bottom: 1px solid @border-color;
+}
+
+.matches {
+  background-color: transparent;
   border-radius: 10px;
-  background-color: @theme_bg_color;
 }
 
-list#main {
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 10px;
+box.plugin:first-child {
+  margin-top: 4px;
 }
 
-list#plugin {
-  background-color: rgba(0, 0, 0, 0);
+box.plugin.info {
+  min-width: 220px;
 }
 
-label#match-desc {
-  font-size: 10px;
+list.plugin {
+  background-color: transparent;
 }
 
-label#plugin {
+label.match {
+  color: @fg-color;
+}
+
+label.match.description {
+  font-size: 12px;
+  color: @desc-color;
+}
+
+label.plugin.info {
   font-size: 14px;
+  color: @fg-color;
 }
+
+.match {
+  background: transparent;
+}
+
+.match:selected {
+  border-left: 4px solid @accent;
+  background-color: rgba(122, 162, 247, 0.08);
+}
+
