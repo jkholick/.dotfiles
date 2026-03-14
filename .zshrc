@@ -45,6 +45,9 @@ if [ "$(hostname)" = "archlinux" ];then
     alias fixmount='sudo echo "fixing stuff" && sudo ntfsfix -d $(blkid --uuid 0AB6D7BBB6D7A58B) &  sudo ntfsfix -d $(blkid --uuid DA40CF3E40CF205D) &  sudo fsck $(blkid --uuid c07d060a-504b-48c6-a6eb-2aa41c87f8d2) & sleep 2 &&  sudo mount -a'
 fi
 
+alias yaygitup="yay --sudoloop -S  $(yay -Q | grep '\b\w*-git\b' | sed 's/ .*//' | tr '\n' ' ')"
+alias yayclear='yay -Sc'
+
 # Alias for progress bar copy and move
 alias mv='mvg -g'
 alias cp='cpg -g'
