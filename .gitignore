@@ -3,3 +3,7 @@
 .config/clipse/clipboard_history.json
 .config/clipse/clipse.log
 
+# Dont include unneccesary install files
+.config/fish/fundle
+.config/yazi/flavors
+.config/yazi/plugins
