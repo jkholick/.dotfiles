@@ -11,7 +11,7 @@
     },
     {
       "label": "suspend",
-      "action": "hyprlock & sleep 0.3 && systemctl suspend",
+      "action": "echo 'screenshot-to-file /tmp/cache_wallpaper.jpg' | socat - /tmp/mpv-socket && wal -n -s -t -i '/tmp/cache_wallpaper.jpg' && pidof hyprlock || hyprlock & sleep 0.3 && systemctl suspend",
       "text": "Suspend",
       "keybind": "S",
       "icon": "/usr/share/wleave/icons/suspend.svg"
